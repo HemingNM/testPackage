@@ -11,7 +11,8 @@ The goal of testPackage is to ...
 You can install the development version of testPackage like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("HemingNM/testPackage")
 ```
 
 ## Example
