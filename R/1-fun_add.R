@@ -1,2 +1,11 @@
-# função add1
-add1 <- funcion(x) x+1
+#' Add 1
+#'
+#' @param x A numeric vector
+#'
+#' @return numeric vector
+#' @export
+#'
+#' @examples
+add1 <- function(x) {
+  x+1
+  }
