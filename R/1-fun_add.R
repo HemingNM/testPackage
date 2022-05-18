@@ -6,6 +6,7 @@
 #' @export
 #'
 #' @examples
+#' add1(10)
 add1 <- function(x) {
   x+1
   }
