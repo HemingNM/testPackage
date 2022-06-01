@@ -8,5 +8,5 @@
 #' @examples
 #' add1(10)
 add1 <- function(x) {
-  x+1
+  data.table::as.data.table(x+1)
   }
