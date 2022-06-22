@@ -1,6 +1,6 @@
 Package: testPackage
 Title: Pacote de teste da disciplina de Ciência Replicável
-Version: 0.0.0.9000
+Version: 0.0.1.0000
 Authors@R: 
     person("Neander", "Heming", , "neanderh@yahoo.com.br", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-2461-5045"))
@@ -13,8 +13,14 @@ Imports:
     data.table,
     terra
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
+Depends: 
+    R (>= 2.10)
+LazyData: true
+VignetteBuilder: knitr

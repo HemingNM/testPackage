@@ -1,0 +1,71 @@
+---
+title: "Compute Species Richness"
+author: "Disciplina Ciência Replicável"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Compute Species Richness}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Loading necessary packages:
+```{r setup}
+library(terra)
+library(testPackage)
+```
+
+### Package datasets
+Inspect datasets from testPackage
+```{r}
+head(sites)
+
+r <- terra::rast(system.file("extdata", "sitesr.tif", package="testPackage"))
+plot(r)
+```
+
+--------------
+### Package functions
+The function `spp_rich` can compute species richness for vector/matrix data
+```{r}
+rich_vec <- spp_rich(sites)
+rich_vec
+```
+
+The value of rr is: `r rich_vec`
+
+The function `spp_rich` can compute species richness for raster/spatial data
+```{r}
+rrich <- spp_rich(r)
+plot(rrich)
+```
+
+```{r}
+bench::mark(
+  raster = {
+    spp_rich(r)
+    }, check = T
+)
+```
+
+
+### Lists
+Non ordered list
+
+ * Item 1
+ * Item 2
+
+Ordered list
+
+ 1. Item 1
+ 1. Item 2
+ 
+ 
+ ## R Markdown
+ <https://rmarkdown.rstudio.com/index.html>
