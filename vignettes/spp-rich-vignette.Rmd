@@ -46,11 +46,12 @@ rrich <- spp_rich(r)
 plot(rrich)
 ```
 
+### Package performance
 ```{r}
 bench::mark(
   raster = {
     spp_rich(r)
-    }, check = T
+  }, check = T
 )
 ```
 
